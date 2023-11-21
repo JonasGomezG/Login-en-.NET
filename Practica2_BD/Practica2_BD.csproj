@@ -57,4 +57,16 @@
 		<PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.6" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Vista\Bienvenida.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\IncioSesion.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\Registro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
