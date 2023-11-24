@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
+using Practica2_BD.Modelo;
+using Practica2_BD.Repositorios;
 
 namespace Practica2_BD
 {
@@ -14,11 +16,9 @@ namespace Practica2_BD
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
-#if DEBUG
-		builder.Logging.AddDebug();
-#endif
-
+            String ruta = obtenerRutaBD.devolverRuta("totalUsuarios.db");
+            builder.Services.AddSingleton<UsuarioRepositorio>(
+            s => ActivatorUtilities.CreateInstance<UsuarioRepositorio>(s, ruta));
             return builder.Build();
         }
     }
