@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate mo:IncioSesion}"
+        ContentTemplate="{DataTemplate mo:Registro}"
         Route="MainPage" />
 
 </Shell>

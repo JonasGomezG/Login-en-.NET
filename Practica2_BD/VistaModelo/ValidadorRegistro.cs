@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Practica2_BD.VistaModelo
 {
-    public class ValidadorRegistro : ObservableValidator
+    public partial class ValidadorRegistro : ObservableValidator
     {
         public ObservableCollection<String> Errores { get; set; } = new ObservableCollection<string>();
 

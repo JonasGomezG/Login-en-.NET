@@ -2,10 +2,25 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Practica2_BD.Vista.IncioSesion"
-             Title="IncioSesion">
+             NavigationPage.HasNavigationBar="False"
+             Title="">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Usuario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Padding="0,40,0,0"/>
+        <Entry 
+            Placeholder="Inserte el usuario"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="Contraseñas"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Padding="0,10,0,0"/>
+        <Entry 
+            Placeholder="Inserte la contraseña"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

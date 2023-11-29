@@ -2,11 +2,68 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Practica2_BD.Vista.Registro"
-             Title="Registro">
+             NavigationPage.HasNavigationBar="False"
+             Title="">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Usuario"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Padding="0,40,0,0"/>
+        <Entry
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Placeholder="Inserte el usuario"/>
+        <Label 
+            Text="Nombre"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="0,10,0,0"/>
+        <Entry
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Placeholder="Inserte el nombre"/>
+        <Label 
+            Text="Edad"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="0,10,0,0"/>
+        <Entry
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Placeholder="Inserte la edad"/>
+        <Label 
+            Text="Contraseña"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="0,10,0,0"/>
+        <Entry
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Placeholder="Inserte la contrseña"/>
+        <Label 
+            Text="Repetir Contraseña"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="0,10,0,0"/>
+        <Entry
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="300"
+            Placeholder="Inserte la contraseá repetida"/>
+        <Button 
+            Text="Iniciar Sesión"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="150"
+            HeightRequest="10"
+            Margin="0,10,0,0"
+            TextColor="Black"
+            FontAttributes="Bold"
+            BackgroundColor="White"/>
     </VerticalStackLayout>
 </ContentPage>
