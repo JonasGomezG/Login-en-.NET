@@ -2,61 +2,82 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Practica2_BD.Vista.Registro"
+             xmlns:vm="clr-namespace:Practica2_BD.VistaModelo"
              NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black"
              Title="">
+    <ContentPage.BindingContext>
+        <vm:ValidadorRegistro/>
+    </ContentPage.BindingContext>
     <VerticalStackLayout>
         <Label 
-            Text="Usuario"
+            Text="Usuario​"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Padding="0,40,0,0"/>
         <Entry
+            Text="{Binding Usuario}"
             VerticalOptions="Center" 
+            TextColor="White"
             HorizontalOptions="Center"
             WidthRequest="300"
             Placeholder="Inserte el usuario"/>
         <Label 
             Text="Nombre"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Padding="0,10,0,0"/>
         <Entry
+            Text="{Binding Nombre}"
             VerticalOptions="Center" 
+            TextColor="White"
             HorizontalOptions="Center"
             WidthRequest="300"
             Placeholder="Inserte el nombre"/>
         <Label 
             Text="Edad"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Padding="0,10,0,0"/>
         <Entry
+            Text="{Binding Edad}"
             VerticalOptions="Center" 
+            TextColor="White"
             HorizontalOptions="Center"
             WidthRequest="300"
             Placeholder="Inserte la edad"/>
         <Label 
             Text="Contraseña"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Padding="0,10,0,0"/>
         <Entry
+            Text="{Binding Passwd}"
             VerticalOptions="Center" 
+            TextColor="White"
             HorizontalOptions="Center"
             WidthRequest="300"
             Placeholder="Inserte la contrseña"/>
         <Label 
             Text="Repetir Contraseña"
+            TextColor="White"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             Padding="0,10,0,0"/>
         <Entry
+            Text="{Binding Passwd2}"
             VerticalOptions="Center" 
+            TextColor="White"
             HorizontalOptions="Center"
             WidthRequest="300"
             Placeholder="Inserte la contraseá repetida"/>
         <Button 
-            Text="Iniciar Sesión"
+            Command="{Binding validarCommand}"
+            Text="Registrarme"
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             WidthRequest="150"
@@ -65,5 +86,25 @@
             TextColor="Black"
             FontAttributes="Bold"
             BackgroundColor="White"/>
+        <Label 
+            Text="¿Ya tienes cuenta?"
+            TextColor="White"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Padding="0,10,0,0"/>
+        <Button 
+            Text="Inicia Sesión"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            WidthRequest="150"
+            HeightRequest="10"
+            Margin="0,10,0,0"
+            TextColor="Black"
+            FontAttributes="Bold"
+            BackgroundColor="White"
+            Clicked="cambiarVista"/>
+        <CollectionView x:Name="errores">
+            
+        </CollectionView>
     </VerticalStackLayout>
 </ContentPage>

@@ -14,17 +14,22 @@ namespace Practica2_BD.Repositorios
 
         private SQLiteConnection conexion;
 
-        public UsuarioRepositorio(String ruta2) 
+        public UsuarioRepositorio(String ruta2)
         {
             ruta = ruta2;
             conexion = new SQLiteConnection(ruta);
             System.Diagnostics.Debug.WriteLine($"La ruta es: {ruta}");
 
-            if (!conexion.TableMappings.Any(e => e.MappedType.Name == "Usuarios")) 
+            if (!conexion.TableMappings.Any(e => e.MappedType.Name == "Usuarios"))
             {
                 conexion.CreateTable<Usuario>();
             }
 
+        }
+
+        public SQLiteConnection devolverRuta()
+        {
+            return conexion;
         }
 
         public void add(Usuario usuario) 

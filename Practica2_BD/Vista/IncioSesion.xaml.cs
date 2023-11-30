@@ -6,4 +6,10 @@ public partial class IncioSesion : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	public void cambiarVista(object sender, EventArgs e) 
+	{ 
+		Navigation.PushAsync(new Vista.Registro());
+	}
+
 }
